@@ -3,8 +3,8 @@ const portfolioData = {
     navName: "Moksh",
     role: "Aspiring AI/ML Engineer",
     tagline: "I help build intelligent systems and turn ideas into structured, meaningful AI experiences.",
-    avatarImage: "assets/moksh-avatar.png",
-    profileImage: "assets/moksh-profile-crop.jpg",
+    avatarImage: "/moksh-avatar.png",
+    profileImage: "/moksh-profile-crop.jpg",
     statusBadge: "AVAILABLE FOR COLLABORATION",
     heroStats: "10+ AI Projects Built",
 
@@ -52,7 +52,7 @@ const portfolioData = {
     category: "LLMs · Generative AI",
     description:
         "Retrieval-Augmented Generation platform that enables intelligent multi-document search, contextual reasoning, and AI-powered answers.",
-    image: "/assets/RAG.png",
+    image: "/RAG.png",
     tags: ["Python", "LangChain", "OpenAI", "ChromaDB"],
     githubUrl: "https://github.com/mokshsaini7/rag-intelligence"
 },

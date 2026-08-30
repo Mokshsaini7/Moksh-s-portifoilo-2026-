@@ -205,13 +205,18 @@ body {
   line-height: 0.82;
 }
 
-/* 3D AVATAR — RESPONSIVE SIZE, NAME REMAINS VISIBLE BEHIND */
+/* 3D AVATAR — RESPONSIVE HERO OVERLAY */
+.headline-bg {
+  position: relative;
+  z-index: 10;
+}
+
 .character-container {
   position: absolute;
   top: 50%;
   left: 50%;
-  z-index: 20; /* avatar stays above the headline */
-  width: clamp(190px, 26vw, 320px);
+  z-index: 20;
+  width: clamp(210px, 24vw, 320px);
   aspect-ratio: 1 / 1;
   display: flex;
   align-items: center;
@@ -221,72 +226,15 @@ body {
   perspective: 1000px;
 }
 
-/* The headline stays behind the avatar, but the smaller responsive
-   avatar allows the name to remain visible on every screen size. */
-.headline-bg {
-  position: relative;
-  z-index: 10;
-}
-
 .character-img {
   width: 100%;
   height: 100%;
-  max-width: 100%;
-  max-height: 100%;
   object-fit: contain;
-  filter: drop-shadow(0 18px 35px rgba(0, 0, 0, 0.9))
-    drop-shadow(0 0 22px rgba(229, 9, 20, 0.28));
+  filter: drop-shadow(0 20px 42px rgba(0, 0, 0, 0.92))
+    drop-shadow(0 0 28px rgba(229, 9, 20, 0.3));
   transition: transform 0.2s ease-out;
   cursor: pointer;
   will-change: transform;
-}
-
-/* Tablet */
-@media (max-width: 1024px) {
-  .character-container {
-    width: clamp(180px, 30vw, 270px);
-  }
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .hero-stage {
-    min-height: clamp(360px, 58vh, 500px);
-  }
-
-  .character-container {
-    width: clamp(165px, 48vw, 235px);
-  }
-
-  .headline-line {
-    font-size: clamp(3rem, 15vw, 7rem);
-  }
-}
-
-/* Small phones */
-@media (max-width: 480px) {
-  .hero-stage {
-    min-height: 380px;
-  }
-
-  .character-container {
-    width: clamp(145px, 52vw, 195px);
-  }
-
-  .headline-line {
-    font-size: clamp(2.75rem, 16vw, 5rem);
-  }
-}
-
-/* Very small devices */
-@media (max-width: 360px) {
-  .character-container {
-    width: 145px;
-  }
-
-  .headline-line {
-    font-size: 2.65rem;
-  }
 }
 
 .hero-bottom {
@@ -1278,5 +1226,370 @@ body {
   .section-header {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+
+/* =========================================================
+   FINAL RESPONSIVE OPTIMIZATION
+   Keeps desktop design intact.
+   Tablet/mobile: MOKSH fully visible, SAINI slightly covered.
+   ========================================================= */
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+img,
+svg {
+  max-width: 100%;
+}
+
+/* Prevent fixed/sticky content from exceeding the viewport */
+.max-container {
+  width: 100%;
+}
+
+/* ---------- LARGE TABLETS / SMALL LAPTOPS ---------- */
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  }
+
+  .hero-stage {
+    min-height: 52vh;
+  }
+
+  /* Slightly smaller avatar so the name remains readable */
+  .character-container {
+    width: clamp(185px, 29vw, 270px);
+    top: 54%;
+  }
+
+  /* Move the complete headline upward */
+  .headline-bg {
+    transform: translateY(-18px);
+  }
+
+  .projects-section,
+  .services-section,
+  .about-section,
+  .faq-testimonials-section {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+/* ---------- TABLETS ---------- */
+@media (max-width: 900px) {
+  .services-grid,
+  .about-grid,
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-left,
+  .discovery-card {
+    position: static;
+  }
+
+  .profile-card {
+    max-width: 34rem;
+  }
+
+  .section-header,
+  .testimonials-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+
+  .section-desc {
+    max-width: 36rem;
+  }
+}
+
+/* ---------- MOBILE + SMALL TABLETS ---------- */
+@media (max-width: 768px) {
+  .navbar-wrapper {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .navbar-pill {
+    max-width: none;
+  }
+
+  .nav-links,
+  .nav-actions {
+    display: none;
+  }
+
+  .mobile-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    color: var(--text-white);
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+  }
+
+  .mobile-drawer.open {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: absolute;
+    top: 3.75rem;
+    left: 0.75rem;
+    right: 0.75rem;
+    background: rgba(18, 18, 18, 0.97);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--border-glass);
+    border-radius: 1.25rem;
+    padding: 1.25rem;
+  }
+
+  .hero-section {
+    min-height: 100svh;
+    padding-top: 5.5rem;
+    padding-bottom: 2rem;
+  }
+
+  .hero-stage {
+    min-height: clamp(350px, 56vh, 480px);
+  }
+
+  /*
+    IMPORTANT HERO CHANGE:
+    The name moves upward, MOKSH remains visible,
+    while the avatar sits lower and slightly overlaps SAINI.
+  */
+  .headline-bg {
+    transform: translateY(-32px);
+  }
+
+  .headline-line {
+    font-size: clamp(3rem, 15vw, 6.8rem);
+    line-height: 0.84;
+  }
+
+  .character-container {
+    width: clamp(165px, 43vw, 225px);
+    top: 57%;
+  }
+
+  .hero-bottom,
+  .section-header,
+  .testimonials-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-bottom {
+    gap: 1.5rem;
+  }
+
+  .projects-grid,
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card,
+  .testimonial-card {
+    min-width: 0;
+  }
+
+  .project-body {
+    padding: 1.25rem;
+  }
+
+  .footer-top {
+    align-items: flex-start;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 0.75rem;
+    padding-bottom: 4.5rem;
+  }
+
+  .footer-cta-buttons {
+    flex-wrap: wrap;
+  }
+
+  .floating-widget {
+    bottom: max(0.75rem, env(safe-area-inset-bottom));
+    max-width: calc(100vw - 1.5rem);
+  }
+
+  .widget-pill {
+    max-width: 100%;
+    gap: 0.9rem;
+    padding: 0.5rem 0.9rem;
+  }
+}
+
+/* ---------- PHONES ---------- */
+@media (max-width: 480px) {
+  .max-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .projects-section,
+  .services-section,
+  .about-section,
+  .faq-testimonials-section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+  }
+
+  .brand-name {
+    display: none;
+  }
+
+  .hero-stage {
+    min-height: 390px;
+  }
+
+  /* MOKSH fully visible */
+  .headline-bg {
+    transform: translateY(-40px);
+  }
+
+  .headline-line {
+    font-size: clamp(2.75rem, 16vw, 5rem);
+    line-height: 0.86;
+  }
+
+  /* Avatar mainly overlaps the lower SAINI line */
+  .character-container {
+    width: clamp(145px, 49vw, 195px);
+    top: 59%;
+  }
+
+  .hero-bottom {
+    gap: 1.25rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.82rem;
+  }
+
+  .rating-info {
+    flex-wrap: wrap;
+  }
+
+  .project-footer {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .project-link {
+    align-self: flex-end;
+  }
+
+  .service-card,
+  .history-item,
+  .testimonial-card,
+  .discovery-card {
+    padding: 1.25rem;
+  }
+
+  .quote-card {
+    padding: 2rem 1rem;
+    border-radius: 1.5rem;
+  }
+
+  .quote-text {
+    font-size: 1.05rem;
+  }
+
+  .history-top {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .history-period {
+    white-space: normal;
+  }
+
+  .quality-badge {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .footer-cols {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem 1rem;
+  }
+
+  .footer-cta-buttons {
+    width: 100%;
+  }
+
+  .footer-cta-buttons a {
+    flex: 1 1 140px;
+    justify-content: center;
+  }
+
+  .w-sub {
+    display: none;
+  }
+
+  .widget-pill {
+    gap: 0.65rem;
+  }
+}
+
+/* ---------- VERY SMALL PHONES ---------- */
+@media (max-width: 360px) {
+  .hero-stage {
+    min-height: 360px;
+  }
+
+  .headline-bg {
+    transform: translateY(-38px);
+  }
+
+  .headline-line {
+    font-size: 2.65rem;
+  }
+
+  .character-container {
+    width: 140px;
+    top: 59%;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .footer-cols {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- ACCESSIBILITY / PERFORMANCE ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

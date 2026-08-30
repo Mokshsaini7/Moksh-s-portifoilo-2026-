@@ -39,7 +39,7 @@
         </a>
       </div>
 
-      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
+      <button class="mobile-toggle" id="mobileToggle" type="button" aria-label="Toggle navigation menu" aria-controls="mobileDrawer" aria-expanded="false">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
       </button>
     </div>
@@ -67,7 +67,7 @@
 
       <!-- 3D Bitmoji Head floating in middle with NO circular background -->
       <div class="character-container" id="characterStage">
-        <img src="/moksh-avatar.png" alt="Moksh Saini 3D Avatar" class="character-img" id="characterImg" />
+        <img src="/moksh-avatar.png" alt="Moksh Saini 3D Avatar" class="character-img" id="characterImg" fetchpriority="high" decoding="async" />
       </div>
     </div>
 
@@ -119,7 +119,7 @@
     <div class="projects-grid" id="projectsGrid"></div>
 
     <div class="center-action">
-      <a href="https://github.com/mokshsaini7" target="_blank" class="btn-outline-pill">
+      <a href="https://github.com/mokshsaini7" target="_blank" rel="noopener noreferrer" class="btn-outline-pill">
         <span>View all my projects</span>
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="text-red"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
       </a>
@@ -178,10 +178,10 @@
     <div class="about-grid">
       <div class="profile-card">
         <div class="profile-img-wrap">
-          <img src="/moksh-profile-crop.jpg" alt="Moksh Saini" />
+          <img src="/moksh-profile-crop.jpg" alt="Moksh Saini" loading="lazy" decoding="async" />
           <div class="social-overlay">
-            <a href="https://github.com/mokshsaini7" target="_blank">GH</a>
-            <a href="https://linkedin.com/in/mokshsaini" target="_blank">IN</a>
+            <a href="https://github.com/mokshsaini7" target="_blank" rel="noopener noreferrer">GH</a>
+            <a href="https://linkedin.com/in/mokshsaini" target="_blank" rel="noopener noreferrer">IN</a>
             <a href="mailto:mokshsaini.dev@gmail.com">mail</a>
           </div>
         </div>
@@ -273,10 +273,10 @@
         <div class="col">
           <span class="col-title">Social</span>
           <div class="social-row">
-            <a href="https://github.com/mokshsaini7" target="_blank">GH</a>
-            <a href="https://linkedin.com/in/mokshsaini" target="_blank">IN</a>
+            <a href="https://github.com/mokshsaini7" target="_blank" rel="noopener noreferrer">GH</a>
+            <a href="https://linkedin.com/in/mokshsaini" target="_blank" rel="noopener noreferrer">IN</a>
             <a href="mailto:mokshsaini.dev@gmail.com">Mail</a>
-            <a href="https://x.com/mokshsaini" target="_blank">X</a>
+            <a href="https://x.com/mokshsaini" target="_blank" rel="noopener noreferrer">X</a>
           </div>
         </div>
         <div class="col">

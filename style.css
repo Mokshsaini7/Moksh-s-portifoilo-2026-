@@ -1593,3 +1593,23 @@ svg {
     scroll-behavior: auto !important;
   }
 }
+/* =========================================
+   NAVBAR — ALWAYS VISIBLE FROM PAGE LOAD
+   ========================================= */
+
+.navbar-wrapper {
+  position: fixed !important;
+  top: 1rem !important;
+  left: 0 !important;
+  right: 0 !important;
+
+  display: flex !important;
+  justify-content: center !important;
+
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) !important;
+
+  z-index: 9999 !important;
+  pointer-events: auto !important;
+}

@@ -112,7 +112,7 @@
         <h2 class="section-title">Projects <span class="italic-muted">I've Built.</span></h2>
       </div>
       <p class="section-desc">
-        Explore a selection of machine learning models, neural computer vision systems, and intelligent applications.
+        Explore systems built around Java internals, database engineering, private information retrieval, and AI-powered voice impersonation detection.
       </p>
     </div>
 
@@ -319,5 +319,98 @@
   <!-- JavaScript Scripts -->
   <script src="data.js"></script>
   <script src="script.js"></script>
+
+  <script>
+    // Resume-aligned content: updates only the project cards and work-history entries.
+    // This runs after data.js and script.js so these sections use the latest content.
+    (() => {
+      const projectsGrid = document.getElementById("projectsGrid");
+      if (projectsGrid) {
+        const projects = [
+          {
+            title: "Own Redis — In-Memory Key-Value Store",
+            status: "In Progress",
+            tech: "Java · Data Structures · Command Parsing",
+            description: "Building a Redis-inspired in-memory key-value store from scratch in Java.",
+            details: "Current focus: core data structures, command parsing, and storage operations."
+          },
+          {
+            title: "Database Engine Built from Scratch",
+            status: "In Progress",
+            tech: "Database Internals · Storage Management",
+            description: "Developing a custom database engine to explore database internals and storage management.",
+            details: "Add only the features currently implemented, such as CRUD operations, indexing, query processing, or persistence."
+          },
+          {
+            title: "VIGIL — Voice Integrity & Impersonation Guard",
+            status: "In Development",
+            tech: "Python · FastAPI · AI/ML",
+            description: "Developing an AI-powered system to identify potential voice-cloning impersonation attacks through a FastAPI backend.",
+            details: "Audio analysis, speaker verification, transcription, contextual risk scoring, and alerts should be listed only where implemented.",
+            link: "https://github.com/Mokshsaini7/VIGIl"
+          },
+          {
+            title: "Private Search Engine",
+            status: "In Progress",
+            tech: "Information Retrieval · Search Indexing",
+            description: "Building a private search engine focused on indexing information and retrieving relevant results.",
+            details: "Add crawling, ranking, indexing architecture, and privacy features only after they are implemented."
+          }
+        ];
+
+        projectsGrid.innerHTML = projects.map(project => `
+          <article class="project-card" style="padding:24px;border:1px solid rgba(255,255,255,.12);border-radius:18px;background:rgba(255,255,255,.025);display:flex;flex-direction:column;gap:12px;">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;">
+              <span style="font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:#ff5a5f;">${project.status}</span>
+              <span style="font-size:.8rem;color:#a9adb5;">${project.tech}</span>
+            </div>
+            <h3 style="margin:0;font-size:1.25rem;">${project.title}</h3>
+            <p style="margin:0;line-height:1.7;">${project.description}</p>
+            <p style="margin:0;line-height:1.65;color:#a9adb5;font-size:.92rem;">${project.details}</p>
+            ${project.link ? `<a href="${project.link}" target="_blank" rel="noopener noreferrer" style="margin-top:auto;color:#ff5a5f;text-decoration:none;">View on GitHub ↗</a>` : ""}
+          </article>
+        `).join("");
+      }
+
+      const workHistory = document.getElementById("workHistory");
+      if (workHistory) {
+        const experience = [
+          {
+            role: "AI/ML Intern",
+            company: "Infosys Springboard",
+            dates: "October 2026 – Present",
+            bullets: [
+              "Studied AI/ML concepts and model evaluation.",
+              "Applied machine learning concepts through practical tasks."
+            ]
+          },
+          {
+            role: "AI/ML Intern",
+            company: "Tronixia Tech",
+            dates: "February – March 2026",
+            bullets: [
+              "Performed data preprocessing and exploratory data analysis.",
+              "Practiced machine learning model development and evaluation."
+            ]
+          }
+        ];
+
+        workHistory.innerHTML = experience.map(item => `
+          <article class="history-item" style="padding:16px 0;border-bottom:1px solid rgba(255,255,255,.12);">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap;">
+              <div>
+                <h3 style="margin:0 0 4px;font-size:1.05rem;">${item.role}</h3>
+                <p style="margin:0;color:#a9adb5;">${item.company}</p>
+              </div>
+              <span style="font-size:.82rem;color:#a9adb5;">${item.dates}</span>
+            </div>
+            <ul style="margin:12px 0 0;padding-left:20px;line-height:1.7;">
+              ${item.bullets.map(bullet => `<li>${bullet}</li>`).join("")}
+            </ul>
+          </article>
+        `).join("");
+      }
+    })();
+  </script>
 </body>
 </html>

@@ -73,13 +73,15 @@ document.addEventListener("DOMContentLoaded", () => {
     projectsGrid.innerHTML = portfolioData.projects.map((project) => `
       <article class="project-card">
         <div class="project-img-banner">
-          <img
-            src="${escapeHTML(project.image)}"
-            alt="${escapeHTML(project.title)}"
-            loading="lazy"
-            decoding="async"
-            onerror="this.style.display='none'"
-          />
+          ${project.image ? `
+            <img
+              src="${escapeHTML(project.image)}"
+              alt="${escapeHTML(project.title)} project preview"
+              loading="lazy"
+              decoding="async"
+              onerror="this.style.display='none'"
+            />
+          ` : ""}
           <span class="project-badge">${escapeHTML(project.category)}</span>
         </div>
 

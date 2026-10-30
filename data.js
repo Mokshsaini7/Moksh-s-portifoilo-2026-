@@ -1,157 +1,146 @@
 /* =========================================================
    MOKSH SAINI PORTFOLIO DATA
-   Replace this entire file with your data.js
+   Content-only portfolio update. Existing visual theme is preserved.
    ========================================================= */
 
 const portfolioData = {
   projects: [
     {
-      id: "project-1",
-      title: "AI Resume Intelligence",
-      category: "NLP · Generative AI",
-      description:
-        "AI-powered resume analysis system that extracts skills, evaluates job relevance, and generates actionable improvement insights.",
-      image: "assets/AI-Resume.png",
-      tags: ["Python", "NLP", "LLM", "FastAPI"],
-      link: "https://github.com/mokshsaini7"
+      id: "vigil",
+      title: "VIGIL — Voice Integrity & Impersonation Guard",
+      category: "AI/ML · Audio Intelligence",
+      description: "An AI-powered voice-cloning impersonation detection project focused on identifying suspicious audio, verifying speakers, analysing conversation context, and generating risk alerts.",
+      image: "",
+      tags: ["Python", "FastAPI", "Audio AI", "SQLAlchemy", "Supabase"],
+      link: ""
     },
     {
-      id: "project-2",
-      title: "RAG Knowledge Intelligence Engine",
-      category: "LLMs · Generative AI",
-      description:
-        "Retrieval-Augmented Generation platform for intelligent multi-document search, contextual reasoning, and grounded AI answers.",
-      image: "assets/RAG.png",
-      tags: ["Python", "LangChain", "RAG", "OpenAI"],
-      link: "https://github.com/mokshsaini7"
+      id: "aura",
+      title: "AURA — AI Research Engineer",
+      category: "Generative AI · RAG",
+      description: "A research assistant that ingests documents and retrieves relevant information to support grounded question answering. The current foundation uses a FastAPI backend, PDF processing, and BM25 retrieval.",
+      image: "RAG.png",
+      tags: ["Python", "FastAPI", "RAG", "BM25", "PyPDF"],
+      link: "https://github.com/Mokshsaini7/AURA-AI-Research-Engineer"
     },
     {
-      id: "project-3",
-      title: "Computer Vision Object Detection",
-      category: "Computer Vision · Deep Learning",
-      description:
-        "Real-time object detection pipeline designed to identify and classify objects from images and live video streams.",
-      image: "assets/Object-Detection.png",
-      tags: ["Python", "YOLO", "OpenCV", "PyTorch"],
-      link: "https://github.com/mokshsaini7"
+      id: "redis-java",
+      title: "Redis-Inspired Key-Value Store",
+      category: "Java · Systems Engineering",
+      description: "An in-progress implementation of an in-memory key-value store in Java, exploring core data structures, command handling, and storage operations.",
+      image: "",
+      tags: ["Java", "Data Structures", "OOP", "Command Parsing"],
+      link: ""
     },
     {
-      id: "project-4",
-      title: "AI Document Intelligence",
-      category: "OCR · NLP · AI",
-      description:
-        "Document understanding workflow that combines OCR, text extraction, classification, and structured information retrieval.",
-      image: "assets/Document-AI.png",
-      tags: ["Python", "OCR", "NLP", "FastAPI"],
-      link: "https://github.com/mokshsaini7"
+      id: "database-engine",
+      title: "Database Engine from Scratch",
+      category: "Database · Backend Engineering",
+      description: "An in-progress learning project to understand database internals, data storage, and the components behind database operations. Features will be documented as they are implemented.",
+      image: "",
+      tags: ["Database Internals", "Storage", "Java", "SQL"],
+      link: ""
     },
     {
-      id: "project-5",
-      title: "Predictive Analytics Engine",
-      category: "Machine Learning · Analytics",
-      description:
-        "End-to-end machine learning system for data preprocessing, feature engineering, model training, evaluation, and prediction.",
-      image: "assets/Predictive-Analytics.png",
-      tags: ["Python", "Scikit-learn", "Pandas", "ML"],
-      link: "https://github.com/mokshsaini7"
-    },
-    {
-      id: "project-6",
-      title: "AI Conversational Assistant",
-      category: "LLMs · Conversational AI",
-      description:
-        "Context-aware conversational assistant built to combine natural-language understanding, memory, tool usage, and intelligent responses.",
-      image: "assets/AI-Assistant.png",
-      tags: ["Python", "LLM", "LangChain", "API"],
-      link: "https://github.com/mokshsaini7"
+      id: "private-search",
+      title: "Private Search Engine",
+      category: "Information Retrieval · Search",
+      description: "An in-progress project exploring private information retrieval, indexing, and relevant-result ranking, with implementation details to be added as the system develops.",
+      image: "",
+      tags: ["Python", "Information Retrieval", "Indexing", "Search"],
+      link: ""
     }
   ],
 
   services: [
     {
       number: "01",
-      title: "Machine Learning",
-      description: "Build practical ML pipelines from data preparation through training, evaluation, and deployment.",
-      tools: ["Python", "Scikit-learn", "Pandas", "NumPy"]
+      title: "AI & Machine Learning",
+      description: "Building practical foundations in data preparation, exploratory analysis, model development, evaluation, and intelligent application workflows.",
+      tools: ["Python", "Pandas", "NumPy", "Scikit-learn"]
     },
     {
       number: "02",
-      title: "Generative AI & RAG",
-      description: "Design grounded AI applications using LLMs, embeddings, retrieval pipelines, and structured context.",
-      tools: ["OpenAI", "LangChain", "RAG", "Vector DB"]
+      title: "Generative AI & Research Systems",
+      description: "Developing document-based AI workflows using retrieval, language models, prompt engineering, and context-aware responses.",
+      tools: ["RAG", "BM25", "LLMs", "PyPDF"]
     },
     {
       number: "03",
-      title: "Computer Vision",
-      description: "Create intelligent vision systems for image understanding, object detection, and visual automation.",
-      tools: ["OpenCV", "PyTorch", "YOLO", "TensorFlow"]
+      title: "Software & Backend Engineering",
+      description: "Building software foundations through Java, Python APIs, database concepts, and backend application development.",
+      tools: ["Java", "Python", "FastAPI", "SQL", "Git"]
     }
   ],
 
   workHistory: [
     {
-      role: "Aspiring AI/ML Engineer",
-      period: "2025 — Present",
-      organization: "Independent Projects",
-      description: "Building practical AI/ML systems across machine learning, generative AI, NLP, and computer vision."
+      role: "AI/ML Virtual Intern",
+      period: "October 2026 — Present",
+      organization: "Infosys Springboard",
+      description: "Virtual internship focused on strengthening AI/ML knowledge through structured learning and practical assignments."
     },
     {
-      role: "AI/ML Project Development",
-      period: "2024 — 2025",
-      organization: "Personal Research & Development",
-      description: "Explored model development, data pipelines, intelligent applications, and deployment workflows."
+      role: "Software Development Intern",
+      period: "July 2026 — August 2026",
+      organization: "Tech Access",
+      description: "Software development internship completed as part of the college-integrated training experience."
+    },
+    {
+      role: "AI/ML Intern",
+      period: "February 2026 — March 2026",
+      organization: "Tronixia Tech",
+      description: "Worked on data preprocessing, exploratory data analysis, and introductory machine-learning development and evaluation tasks."
+    },
+    {
+      role: "Data Analyst Intern",
+      period: "July 2025 — August 2025",
+      organization: "Tech Access",
+      description: "College-integrated internship covering data analysis workflows and tools including Excel, Tableau, and Power BI."
+    },
+    {
+      role: "Bachelor of Computer Applications (BCA)",
+      period: "2024 — 2028",
+      organization: "Don Bosco Institute of Technology · GGSIPU, New Delhi",
+      description: "Undergraduate computer applications student building foundations in programming, software development, databases, and artificial intelligence."
     }
   ],
 
-  testimonials: [
-    {
-      quote: "Moksh's approach is structured. He focuses on model clarity before architecture design, and that reflects in every detail.",
-      name: "Phillip B.",
-      role: "AI Research Collaborator",
-      initials: "PB"
-    },
-    {
-      quote: "Strong attention to detail and a clear understanding of how AI systems should solve real problems.",
-      name: "Alex R.",
-      role: "Technology Collaborator",
-      initials: "AR"
-    },
-    {
-      quote: "Moksh combines curiosity with practical execution and communicates technical ideas clearly.",
-      name: "Jordan K.",
-      role: "Project Collaborator",
-      initials: "JK"
-    }
-  ],
+  // No testimonials are displayed until genuine, approved endorsements are supplied.
+  testimonials: [],
 
   faqs: [
     {
-      question: "What kind of AI/ML projects do you build?",
-      answer: "I build machine learning, generative AI, RAG, NLP, and computer vision applications with a focus on practical problem solving."
+      question: "What areas of technology are you focused on?",
+      answer: "My current focus is AI/ML engineering and software development, especially Python, Java, machine-learning fundamentals, generative AI, retrieval systems, APIs, and databases."
     },
     {
-      question: "Can you build an AI solution from scratch?",
-      answer: "Yes. I can work across data preparation, model development, AI integration, API development, testing, and deployment."
+      question: "What are you currently building?",
+      answer: "My featured projects include VIGIL, an AI voice-impersonation detection system; AURA, an AI research assistant; a Redis-inspired key-value store in Java; a database engine; and a private search engine. Some are actively in development."
     },
     {
-      question: "Do you work with LLM and RAG applications?",
-      answer: "Yes. I work with LLM-based applications, retrieval pipelines, embeddings, vector search, prompt design, and contextual generation."
+      question: "What courses and training have you completed?",
+      answer: "My learning includes AI/ML training through Apna College, Databricks Generative AI, Google Cloud Introduction to Generative AI, Microsoft Prompt Engineering with GitHub Copilot, IBM Prompt Engineering, and the Tata Data Visualization job simulation."
+    },
+    {
+      question: "Where are you studying?",
+      answer: "I am pursuing a Bachelor of Computer Applications (BCA) at Don Bosco Institute of Technology, affiliated with Guru Gobind Singh Indraprastha University (GGSIPU), from 2024 to 2028."
     },
     {
       question: "How can I contact you?",
-      answer: "Use the Contact or Book a call buttons on the website to start a conversation about your project."
+      answer: "You can reach me by email or connect with me through GitHub and LinkedIn using the links on this website."
     }
   ],
 
   marquee: [
-    ["Python", "CORE"],
-    ["PyTorch", "DEEP LEARNING"],
-    ["TensorFlow", "AI"],
-    ["OpenCV", "VISION"],
-    ["OpenAI", "LLM"],
-    ["LangChain", "GEN AI"],
+    ["Python", "PROGRAMMING"],
+    ["Java", "SOFTWARE"],
+    ["Machine Learning", "AI"],
+    ["Generative AI", "LLM"],
     ["FastAPI", "BACKEND"],
-    ["Scikit-learn", "ML"]
+    ["SQL", "DATABASES"],
+    ["Pandas", "DATA"],
+    ["Git", "DEVELOPMENT"]
   ]
 };
 
